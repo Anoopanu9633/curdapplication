@@ -7,9 +7,9 @@ pipeline
         {
             steps
             {
-               bat "rmdir  /s /q TicketBookingServiceJunitTesting"
-                bat "git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git"
-                bat "mvn clean -f TicketBookingServiceJunitTesting"
+               bat "rmdir  /s /q assesmentfile"
+                bat "git clone https://github.com/Anoopanu9633/assesmentfile.git"
+                bat "mvn clean -f assesmentfile"
             }
         }
        
@@ -17,7 +17,7 @@ pipeline
         {
             steps 
             {
-                bat "mvn package -f TicketBookingServiceJunitTesting"
+                bat "mvn package -f assesmentfile"
             }
         }
     }
