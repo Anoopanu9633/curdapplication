@@ -24,12 +24,12 @@ pipeline
         
         
         
-        stage('Building docker image')
+       stage('Building docker image')
         {
-            steps
+           steps
             {
-                bat 'docker build -t anoop9633/spring-boot-docker .'
-                
+             //   bat 'docker build -t anoop9633/spring-boot-docker .'
+                bat 'docker pull anoop9633/gs-spring-boot-docker'  
             }
         }
     
@@ -41,7 +41,7 @@ pipeline
             steps
             {
                 bat "docker login -u anoop9633 -p Preetha123"   
-                bat 'docker push anoop9633/spring-boot-docker'
+                bat 'docker push anoop9633/gs-spring-boot-docker'
             }
         }
         
