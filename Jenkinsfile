@@ -28,8 +28,8 @@ pipeline
         {
            steps
             {
-             //   bat 'docker build -t anoop9633/spring-boot-docker .'
-                bat 'docker pull anoop9633/gs-spring-boot-docker'  
+               bat 'docker build -t anoop9633/spring-boot-docker .'
+             //   bat 'docker pull anoop9633/gs-spring-boot-docker'  
             }
         }
     
