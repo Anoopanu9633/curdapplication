@@ -21,7 +21,9 @@ pipeline
             }
         }
       
-        
+        environment {
+            dockerImaage =''
+        }  
         
         
        stage('Building docker image')
@@ -29,7 +31,10 @@ pipeline
            steps
             {
              //  bat 'docker build -t anoop9633/spring-boot-docker .'
-               bat 'docker pull anoop9633/gs-spring-boot-docker'  
+              // bat 'docker pull anoop9633/gs-spring-boot-docker'
+                
+                dockerImage= docker.build.registery
+                
             }
         }
     
