@@ -28,9 +28,9 @@ pipeline
            steps
             {
              //  bat 'docker build -t anoop9633/spring-boot-docker .'
-              // bat 'docker pull anoop9633/gs-spring-boot-docker'
+              bat 'docker pull anoop9633/gs-spring-boot-docker'
                 
-                dockerImage= docker.build.registery
+              
                 
             }
         }
@@ -38,14 +38,14 @@ pipeline
         
         
         
-//          stage('Pushing docker image')
-//         {
-//             steps
-//             {
-//                 bat "docker login -u anoop9633 -p Preetha123"   
-//                 bat 'docker push anoop9633/gs-spring-boot-docker'
-//             }
-//         }
+         stage('Pushing docker image')
+        {
+            steps
+            {
+                bat "docker login -u anoop9633 -p Preetha123"   
+                bat 'docker push anoop9633/gs-spring-boot-docker'
+            }
+        }
              }
     
     
