@@ -21,9 +21,6 @@ pipeline
             }
         }
       
-        environment {
-            dockerImaage =''
-        }  
         
         
        stage('Building docker image')
@@ -41,16 +38,15 @@ pipeline
         
         
         
-         stage('Pushing docker image')
-        {
-            steps
-            {
-                bat "docker login -u anoop9633 -p Preetha123"   
-                bat 'docker push anoop9633/gs-spring-boot-docker'
-            }
-        }
-        
-    }
+//          stage('Pushing docker image')
+//         {
+//             steps
+//             {
+//                 bat "docker login -u anoop9633 -p Preetha123"   
+//                 bat 'docker push anoop9633/gs-spring-boot-docker'
+//             }
+//         }
+             }
     
     
-}
+ }
