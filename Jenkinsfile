@@ -1,9 +1,6 @@
 pipeline
 {
     agent any
-  // environment {
-  //       registry = "public.ecr.aws/b8j5j7c4/anoopanu"
-  //   }
      stages 
     {
         stage("git repo & cleans") 
@@ -23,8 +20,6 @@ pipeline
                 bat "mvn package -f curdapplication"
             }
         }
-      
-        
         
        stage('Building docker image')
         {
@@ -34,24 +29,15 @@ pipeline
              //bat 'docker pull anoop9633/curdapplication'
               //  docker.build registry        
             }
-        }
-     stage('Pushing into ecr')
-         {
-             steps
+        }   
+         stage('Pushing docker image')
+        {
+            steps
             {
-             bat 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/b8j5j7c4'
-              bat 'docker push public.ecr.aws/b8j5j7c4/anoopanu:latest'
-                
+                bat "docker login -u anoop9633 -p Preetha123"   
+                bat 'docker push anoop9633/curdapplication'
+            }
          }
-        
-        //  stage('Pushing docker image')
-        // {
-        //     steps
-        //     {
-        //         bat "docker login -u anoop9633 -p Preetha123"   
-        //         bat 'docker push anoop9633/curdapplication'
-        //     }
-         // }
              }
     
     
