@@ -1,15 +1,12 @@
 pipeline
 {
     agent any
-    
   // environment {
   //       registry = "public.ecr.aws/b8j5j7c4/anoopanu"
   //   }
-
-    
-    stages 
+     stages 
     {
-        stage("git repo & clean") 
+        stage("git repo & cleans") 
         {
             steps
             {
