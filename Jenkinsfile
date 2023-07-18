@@ -32,7 +32,7 @@ pipeline
             {
              // bat 'docker build -t anoop9633/curdapplication .'
              // bat 'docker pull anoop9633/curdapplication'
-                bat 'dockerImage = docker.build registry'         
+                docker.build registry        
             }
         }
      stage('Pushing docker image')
