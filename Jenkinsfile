@@ -35,7 +35,7 @@ pipeline
                 docker.build registry        
             }
         }
-     stage('Pushing docker image')
+     stage('Pushing into ecr')
          {
              steps
             {
