@@ -11,7 +11,7 @@ pipeline
             steps
             {
               //bat "rmdir  /s /q curdapplication"
-              // bat "git clone https://github.com/Anoopanu9633/curdapplication.git"
+               bat "git clone https://github.com/Anoopanu9633/curdapplication.git"
                 bat "mvn clean -f curdapplication"
             }
         }
