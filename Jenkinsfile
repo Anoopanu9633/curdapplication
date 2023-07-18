@@ -30,9 +30,9 @@ pipeline
         {
            steps
             {
-             bat 'docker build -t anoop9633/curdapplication .'
+            // bat 'docker build -t anoop9633/curdapplication .'
              // bat 'docker pull anoop9633/curdapplication'
-                //docker.build registry        
+                docker.build registry        
             }
         }
      stage('Pushing into ecr')
