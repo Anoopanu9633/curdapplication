@@ -1,6 +1,9 @@
 pipeline
 {
     agent any
+  environment {
+        registry = "public.ecr.aws/b8j5j7c4/anoopanu"
+    }
     stages 
     {
         stage("git repo & clean") 
@@ -34,18 +37,23 @@ pipeline
                 
             }
         }
-    
-        
-        
-        
-         stage('Pushing docker image')
-        {
-            steps
+     stage('Pushing docker image')
+         {
+             steps
             {
-                bat "docker login -u anoop9633 -p Preetha123"   
-                bat 'docker push anoop9633/curdapplication'
+             bat 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/b8j5j7c4'
+              bat 'docker push public.ecr.aws/b8j5j7c4/anoopanu:latest'
             }
-        }
+         }
+        
+        //  stage('Pushing docker image')
+        // {
+        //     steps
+        //     {
+        //         bat "docker login -u anoop9633 -p Preetha123"   
+        //         bat 'docker push anoop9633/curdapplication'
+        //     }
+         // }
              }
     
     
