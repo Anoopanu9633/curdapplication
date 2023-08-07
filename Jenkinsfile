@@ -38,15 +38,6 @@ pipeline
                 bat 'docker push anoop9633/curdapplication'
             }
          }
-        stage('Pushing into ecr')
-         {
-             steps
-            {
-             bat 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/b8j5j7c4'
-              bat 'docker push public.ecr.aws/b8j5j7c4/anoopanu:latest'
-                
-         }
-             }
              }
     
     
