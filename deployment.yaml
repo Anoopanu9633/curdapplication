@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anoopanu
+  labels:
+    app: anoopanu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anoopanu
+  template:
+    metadata:
+      labels:
+        app: anoopanu
+    spec:
+      containers:
+        - name: anoopanu
+          image: 418726154740.dkr.ecr.us-east-1.amazonaws.com/anoopanu:1.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8085
