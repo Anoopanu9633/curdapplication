@@ -35,5 +35,5 @@ jobs:
         REPOSITORY: anoopanu
         IMAGE_TAG: 1.
       run: |
-        docker pull anoop9633/ubuntu
+        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
