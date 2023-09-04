@@ -39,7 +39,7 @@ jobs:
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
        
     - name: Update kube config
-      run: aws eks update-kubeconfig --name anoopanu --region us-east-2
+      run: aws eks update-kubeconfig --name anoopanu 
      
     - name: Deploy to EKS
       run: |
