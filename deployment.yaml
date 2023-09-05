@@ -15,8 +15,8 @@ spec:
         app: anoopanu
     spec:
       containers:
-        - name: dockerimageanu
-          image: 418726154740.dkr.ecr.us-east-2.amazonaws.com/dockerimageanu
+        - name: anoopanu
+          image: 418726154740.dkr.ecr.us-east-2.amazonaws.com/anoopanu
           imagePullPolicy: Always
           ports:
             - containerPort: 8085
